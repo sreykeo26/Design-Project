@@ -4,8 +4,6 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,7 +17,6 @@ h2{
      font-size: 25px;
     margin: 15px 0;
     font-family: 'Comic Sans MS', cursive;
-
 }
 .hero-text h1 {
   color: white;
@@ -39,26 +36,18 @@ h2{
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin: 0 15px;
+  list-style: none;      
+  display: flex;          
+  gap: 20px;              
+  padding: 0;            
+  margin: 0;             
 }
 
 .nav-links a {
-  text-decoration: none;
-  color:rgb(28, 28, 92);
+  text-decoration: none;  
+  color:rgb(28, 28, 92);           
   font-weight: bold;
-  transition: color 0.3s;
 }
-
-.nav-links a:hover {
-  color: rgb(134, 195, 211);
-}
-
-
 .btn {
   background-color: rgb(44, 143, 161);
   color: #fff;
@@ -68,17 +57,6 @@ h2{
   font-weight: bold;
   transition: background 0.3s;
 }
-.btn-learn {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-  border: 2px solid  
-}
 
 .hero {
   display: flex;
@@ -87,173 +65,57 @@ h2{
   padding: 50px;
   background: #12bbe6;
 }
-.hero-text {
-  max-width: 50%;
-}
-.hero-text .desc {
-  font-size: 20px;
-  color: rgb(219, 217, 236);
+
+.hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.hero-text .text {
-  font-size: 16px;
-  color: white;
+
+.hero .desc {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.hero .text {
+  max-width: 700px;
+  margin: 0 auto 20px;
   line-height: 1.5;
 }
 
-.hero-image img {
-  width: 400px;
-  border-radius: 10px;
+.btn-learn {
+  background: #ff5722;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn-learn:hover {
+  background: #e64a19;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
   .hero {
-    flex-direction: column;
-    text-align: center;
+    padding: 60px 15px;
   }
-
-  .hero-text {
-    max-width: 100%;
-    margin-bottom: 20px;
+  .hero h1 {
+    font-size: 2rem;
   }
-
-  .hero-image img {
-    width: 100%;
-  
-    max-width: 300px;
+  .hero .text {
+    font-size: 0.95rem;
   }
 }
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
 
-section h2 {
-  font-size: 40px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-.info {
-  text-align: center;          
-  padding: 50px 20px;           
-  background-color: #e8f5e9;   
-}
-
-.info h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #2c3e50;
-}
-
-.info-box {
-  display: flex;                
-  justify-content: center;      
-  gap: 20px;                    
-  flex-wrap: wrap;              
-}
-
-.info-item {
-  background-color: white;      
-  padding: 20px;                
-  width: 250px;                 
-  border-radius: 10px;         
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;           
-}
-
-
-.info-item:hover {
-  transform: translateY(-5px);  
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
-}
-
-
-.info-item img {
-  width: 210px;
-  height: 200px;
-  border-radius: 10px;
-}
-
-/* Card title */
-.info-item h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Card description */
-.info-item p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Responsive for tablets and mobile */
-@media (max-width: 768px) {
-  .info-box {
-    flex-direction: column;    
-    align-items: center;        
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
   }
-
-  .info-item {
-    width: 90%;                 
-    margin-bottom: 20px;        
+  .btn-learn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
   }
 }
-.info-item h3 {
-  color: #3498db;
-  margin-bottom: 10px;
-}
-
-.info-item p {
-  color: #555;
-  font-size: 15px;
-}
-
-
-
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.classes ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.classes li {
-  font-size: 16px;
-  padding: 8px 0;
-  color: #2c3e50;
-}
-
-.classes p {
-  color: #555;
-  margin-top: 15px;
-}
-
-.contact p {
-  font-size: 16px;
-  color: #333;
-  margin: 8px 0;
-}
-
-
 .about-section {
       display: flex;
       flex-wrap: wrap;
@@ -272,6 +134,7 @@ section h2 {
     .about-content h2 {
       font-size:30px;
       margin-bottom: 20px;
+       color: #2c3e50;
     }
     .about-content p {
       margin-bottom: 15px;
@@ -293,7 +156,7 @@ section h2 {
       gap: 10px;
       color: rgb(67, 67, 70);
     }
-    .features div::before {
+     .features div::before {
       content: "✔";
       color: rgb(10, 136, 225);
       font-weight: bold;
@@ -318,65 +181,7 @@ section h2 {
         max-width: 100%;
       }
     }
-
-.classes {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  padding: 20px;
-  background: #edeef1; 
-}
-
-h3 {
-
-  text-align: center;
-  color:rgb(32, 136, 189);
-  
-}
-
-.class-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-
- img {
-  width: 100%;
-  height:50%;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 12px;
-}
-.class-box p {
-  font-size: 14px;
-  color: #5a5757;
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
- button {
-  background: #12bbe6;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.2s ease;
-}
-
-.class-box button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 600px){
-  .class-box img { height: 140px; }
-  .class-box h3 { font-size: 18px; }
-  .class-box p { font-size: 13px; }
-}
-.teachers-section {
+  .teachers-section {
       padding: 50px 20px;
     }
 
@@ -384,12 +189,15 @@ h3 {
     .teachers-section h2 {
       font-size: 36px;
       margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
       color: #2c3e50;
     }
 
     .teachers-container {
       display: flex;
       justify-content: center;
+      
       gap: 40px;
       flex-wrap: wrap;
     }
